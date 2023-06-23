@@ -46,34 +46,34 @@ function TodoList() {
 
   return (
     <div>
-      <h1>To-Do List</h1>
+      <h1>To-Do List aplikacia</h1>
 
       <form onSubmit={handleNewTask}>
         <input type="text" name="task" placeholder="Enter a new task" />
-        <button type="submit">Add Task</button>
+        <button type="submit">davalebis damateba</button>
       </form>
 
       <div>
-        <h2>Tasks to be Performed</h2>
+        <h2>shesasrulebeli</h2>
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
               {task.name}
-              <button onClick={() => handleTaskComplete(task.id)}>Finish</button>
-              <button onClick={() => handleDeleteTask(task.id, false)}>Delete</button>
+              <button onClick={() => handleTaskComplete(task.id)}>dasruleba</button>
+              <button onClick={() => handleDeleteTask(task.id, false)}>washla</button>
             </li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h2>Completed Tasks</h2>
+        <h2>shesrulebuli</h2>
         <ul>
           {completedTasks.map((task) => (
             <li key={task.id}>
               {task.name}
-              <button onClick={() => handleDeleteTask(task.id, true)}>Delete</button>
-              <button onClick={() => handleMoveToTodo(task.id)}>Move to To-Do</button>
+              <button onClick={() => handleDeleteTask(task.id, true)}>washla</button>
+              <button onClick={() => handleMoveToTodo(task.id)}>dasasrulebelshi gadatana</button>
             </li>
           ))}
         </ul>
