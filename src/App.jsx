@@ -46,7 +46,7 @@ function TodoList() {
 
   return (
     <div>
-      <h1>To-Do List aplikacia</h1>
+      <h1>To-Do List აპლიკაცია</h1>
 
       <form onSubmit={handleNewTask}>
         <input type="text" name="task" placeholder="Enter a new task" />
@@ -54,26 +54,26 @@ function TodoList() {
       </form>
 
       <div>
-        <h2>shesasrulebeli</h2>
+        <h2>შესასრულებელი</h2>
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
               {task.name}
-              <button onClick={() => handleTaskComplete(task.id)}>dasruleba</button>
-              <button onClick={() => handleDeleteTask(task.id, false)}>washla</button>
+              <button onClick={() => handleTaskComplete(task.id)}>დასრულება</button>
+              <button onClick={() => handleDeleteTask(task.id, false)}>წაშლა</button>
             </li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h2>shesrulebuli</h2>
+        <h2>შესრულებული</h2>
         <ul>
           {completedTasks.map((task) => (
             <li key={task.id}>
               {task.name}
-              <button onClick={() => handleDeleteTask(task.id, true)}>washla</button>
-              <button onClick={() => handleMoveToTodo(task.id)}>dasasrulebelshi gadatana</button>
+              <button onClick={() => handleDeleteTask(task.id, true)}>წაშლა</button>
+              <button onClick={() => handleMoveToTodo(task.id)}>დასასრულებელი</button>
             </li>
           ))}
         </ul>
