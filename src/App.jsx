@@ -88,24 +88,24 @@ function TodoList() {
 
   return (
     <div>
-      <h1>To-Do List Application</h1>
+      <h1>To-Do List აპლიკაცია</h1>
 
       <form onSubmit={handleNewTask}>
-        <input type="text" name="task" placeholder="Enter a new task" />
-        <button type="submit">Add Task</button>
+        <input type="text" name="task" placeholder="შეიყვანეთ ახალი დავალება" />
+        <button type="submit">დავალების დამატება</button>
       </form>
 
       <div>
-        <h2>Tasks to Complete</h2>
+        <h2>დასასრულებელი დავალებები</h2>
         <ul>
           {state.tasks.map((task) => (
             <li key={task.id}>
               {task.name}
               <button onClick={() => handleTaskComplete(task.id)}>
-                Mark as Complete
+                დასრულებულებში გადატანა
               </button>
               <button onClick={() => handleDeleteTask(task.id, false)}>
-                Delete
+                წაშლა
               </button>
             </li>
           ))}
@@ -113,16 +113,16 @@ function TodoList() {
       </div>
 
       <div>
-        <h2>Completed Tasks</h2>
+        <h2>დასრულებული დავალებები</h2>
         <ul>
           {state.completedTasks.map((task) => (
             <li key={task.id}>
               {task.name}
               <button onClick={() => handleDeleteTask(task.id, true)}>
-                Delete
+                წაშლა
               </button>
               <button onClick={() => handleMoveToTodo(task.id)}>
-                Move to Tasks
+                დაუსრულებლებში გადატანა
               </button>
             </li>
           ))}
